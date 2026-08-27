@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator 😂</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>😂 Random Joke Generator 😂</h1>
+            <p>Get instant laughs from multiple joke APIs!</p>
+        </div>
+
+        <div class="content">
+            <div class="joke-display">
+                <div id="jokeBox" class="joke-box">
+                    <p id="jokeText">Click a button to get a joke!</p>
+                    <small id="source"></small>
+                </div>
+            </div>
+
+            <div class="buttons-grid">
+                <button class="btn btn-primary" onclick="getJoke('official')">📖 Official Joke</button>
+                <button class="btn btn-secondary" onclick="getJoke('jokesapi')">🎲 Random API</button>
+                <button class="btn btn-success" onclick="getJoke('programmer')">💻 Programmer Joke</button>
+                <button class="btn btn-info" onclick="getJoke('fact')">💡 Fun Fact</button>
+                <button class="btn btn-danger" onclick="getJoke('random')">🎯 Surprise Me!</button>
+            </div>
+
+            <div class="stats">
+                <p>Jokes Generated: <span id="jokeCount">0</span></p>
+                <button class="btn btn-outline" onclick="resetCounter()">Reset Counter</button>
+                <button class="btn btn-outline" onclick="copyToClipboard()">📋 Copy Joke</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Built with ❤️ | Using Public Joke APIs</p>
+            <p><a href="https://github.com" target="_blank">GitHub</a> | <a href="#" target="_blank">Documentation</a></p>
+        </div>
+    </div>
+
+    <div id="loadingSpinner" class="spinner hidden"></div>
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
